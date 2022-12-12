@@ -1,0 +1,185 @@
+$dark_bg_colour: #1F2937;
+$button_color: #3882F6;
+$quote_section_bg: #E5E7Eb;
+$content_padding: 30px 20px;
+
+@mixin hero_main_text{
+    font-size: 48px;
+    color: #F9FAF8;
+}
+@mixin hero_socondary_text{
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+@mixin hero_logo_text{
+    font-size: 24px;
+    color: #F9FAF8;
+}
+@mixin inforation_header_text{
+    font-size: 48px;
+    color: #1f2937;
+}
+@mixin inforation_header_text{
+    font-size: 36px;
+    color: #1f2937;
+}
+
+@mixin flex{
+    display: flex;
+}
+
+@mixin d_flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin d_flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container{
+    padding: 0 6%;
+}
+
+
+.d_flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+// .d_flex_center{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+
+nav{
+    background-color: $dark_bg_colour;
+    color: $quote_section_bg;
+
+    #header_logo_div{
+        min-width: 35%;
+    }
+
+    h2{
+        @include hero_logo_text();
+        font-size:24px;
+    }
+
+    div{
+        padding:$content_padding;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links_list{
+        display: flex;
+        gap: 3%;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+
+        li{
+           min-width: 130px;
+           text-align: center;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+    }
+}
+
+
+
+
+.hero{
+    background-color: $dark_bg_colour;
+    // display: flex;
+    // // @include flex();
+    // justify-content: center;
+
+    // @include d_flex();
+
+    h1{
+        @include hero_logo_text();
+
+    }
+
+    p{
+        @include hero_socondary_text()
+    }
+
+    button{
+
+    }
+}
+
+
+.hero_divs{
+    // display: flex;
+    // box-sizing: border-box;
+    // justify-content: space-between;
+
+    @include d_flex();
+
+
+    img{
+        height: 200px;
+        align-self: center;
+    }
+
+    padding: 35px 0px;
+
+    div{
+        padding:$content_padding;
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content:space-around;
+        min-width: 350px;
+        fl
+
+        button{
+            width: 110px;
+            padding: 5px 25px;
+            border-radius: 6px;
+            background-color: $button_color;
+            color: $quote_section_bg;
+        }
+
+        h1{
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        p{
+            font-size: 18px;
+        }
+    }
+
+    .image_cont{
+        @include d_flex_center();
+        padding:0;
+    }
+}
+
+// .image_cont{
+//     img{
+//         height: 200px;
+//     }
+// }
+
